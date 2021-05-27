@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    background-color: #e0dedc;
+}
+
+.content {
+    background-color: #fff;
+    width: 50%;
+    min-height: 500px;
+    margin: 0 auto;
+    margin-top: 3%;
+    padding-top: 1%;
+    border-radius: 10px;
+}
+
+/* Počasí */
+.pocasi {
+    padding: 5%;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20pt;
+}
+
+.item {
+    display: flex;
+    margin: 1% 2% 3% 2%;
+    border-bottom: 1px solid #aaa;
+}
+
+.den {
+    width: 80%;
+    float: left;
+}
+
+.stupne {
+    width: 20%;
+    float: right;
+    text-align: right;
+}
+
+/* Vyhledávač */
+.vyhledavac {
+    text-align: center;
+}
+
+.mesto {
+    width: 30%;
+    padding: 1%;
+}
+
+.btn {
+    padding: 1%;
+    background-color: #fff;
+}
+
+/* Nadpis */
+.header {
+    display: block;
+    text-align: center;
+}
