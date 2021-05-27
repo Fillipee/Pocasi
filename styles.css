@@ -61,3 +61,29 @@ body {
     display: block;
     text-align: center;
 }
+
+/* Našeptávač */
+.autocomplete-items {
+    width: 50%;    
+    margin: 0 auto;
+    margin-top: 2%;
+    padding: 1%;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+.autocomplete-item {
+    margin: 0 auto;
+    width: 95%;
+    display: block;
+    padding: 2% 0;
+    margin-top: 1px;
+    cursor: pointer;
+    
+}
+
+.autocomplete-item:hover {
+    background-color: #eee;
+    border-radius: 5px;
+}
