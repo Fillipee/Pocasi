@@ -18,58 +18,66 @@
 
             <div class="vyhledavac">
 
-                <form autocomplete="off">
-                    <input type="text" class="mesto" name="mesto" id="mesto" placeholder="Praha">
-                    <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-                </form>
-
+                
+                <input type="text" class="mesto" name="mesto" id="mesto" placeholder="Praha" autocomplete="off">
+                <button type="submit" id="btn" class="btn"><i class="fa fa-search"></i></button>
                 
 
             </div>
-            <p id='output'></p>
+
             <div class="pocasi">
                 <div class="item">
                     <div class="den">
-                        Pondělí
+                        Nyní
                     </div>
-                    <div class="stupne">
-                        10°
+                    <div class="stupne" id="stupne_1">
+                        0°
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="den">
+                    <div class="den" id="den_2">
                         Úterý
                     </div>
-                    <div class="stupne">
-                        12°
+                    <div class="stupne" id="stupne_2">
+                        0°
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="den">
+                    <div class="den" id="den_3">
                         Středa
                     </div>
-                    <div class="stupne">
-                        11°
+                    <div class="stupne" id="stupne_3">
+                        0°
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="den">
+                    <div class="den" id="den_4">
                         Čtvrtek
                     </div>
-                    <div class="stupne">
-                        14°
+                    <div class="stupne" id="stupne_4">
+                        0°
                     </div>
                 </div>
 
                 <div class="item">
-                    <div class="den">
+                    <div class="den" id="den_5">
                         Pátek
                     </div>
-                    <div class="stupne">
-                        16°
+                    <div class="stupne" id="stupne_5">
+                        0°
+                    </div>
+                </div>
+
+                
+                <div class="item">
+                    <div class="den" id="den_6">
+                        Sobota
+                    </div>
+                    <div class="stupne" id="stupne_6">
+                        0°
                     </div>
                 </div>
             </div>
@@ -79,5 +87,6 @@
         </div>
 
         <script src="autocomplete.js" async defer></script>
+        <script src="weather.js" async defer></script>
     </body>
 </html>
