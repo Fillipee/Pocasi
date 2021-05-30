@@ -87,3 +87,12 @@ body {
     background-color: #eee;
     border-radius: 5px;
 }
+
+/* Stupně */
+.stupne_max {
+    font-weight: bold;
+}
+
+.stupne_min {
+    color: #777;
+}
