@@ -1,13 +1,15 @@
 let mesta = [];
+
 fetch("city.list.json")
-    .then(response => response.json())
-    .then(data => {
-        for (let i = 0 ; i < data.length; i ++) {
-            if (data[i].country == "CZ") {
-                mesta.push(data[i].name);
-            }            
-        }        
-    });
+  .then(response => response.json())
+  .then(data => {        
+      for (let i = 0 ; i < data.length; i ++) {
+          if (data[i].country == stat) { //stat je z staty.js
+              mesta.push(data[i].name);
+          }
+      }
+      
+  });
 
 inp = document.getElementById("mesto");
 

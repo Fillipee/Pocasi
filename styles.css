@@ -12,8 +12,42 @@ body {
     min-height: 500px;
     margin: 0 auto;
     margin-top: 3%;
+    margin-right: 25%;
     padding-top: 1%;
+    border-radius: 10px;    
+    float: left;
+}
+
+.staty {
+    background-color: #fff;
+    float: left;
+    width: 5%;
+    margin: 3% 9% 0% 9%;
+    padding: 1%;
+    text-align: center;
     border-radius: 10px;
+}
+
+.staty ul {    
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.staty li {
+    margin-top: 10%;
+    padding: 6%;
+}
+
+.staty li:hover {
+    background-color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.active {
+    font-weight: bold;
 }
 
 /* Počasí */
@@ -31,12 +65,12 @@ body {
 }
 
 .den {
-    width: 80%;
+    width: 60%;
     float: left;
 }
 
 .stupne {
-    width: 20%;
+    width: 50%;
     float: right;
     text-align: right;
 }
@@ -96,3 +130,9 @@ body {
 .stupne_min {
     color: #777;
 }
+
+@media only screen and (max-width: 700px) {
+    .content {
+        width: 80%;
+    }
+  }
