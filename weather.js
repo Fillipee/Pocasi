@@ -1,27 +1,6 @@
 const btn = document.getElementById('btn');
 let mestoValue = document.getElementById('mesto');
 
-const dny = ['Pondělí', 'Úterý', 'Středa', 'Čtvrtek', 'Pátek', 'Sobota', 'Neděle'];
-
-
-//Zobrazí dny
-function zobrazDny() {
-    dnyValue = [];
-    let date = new Date();
-    let dalsiDen;
-    for (i = 2; i < 7; i++) {
-        dnyValue[i] = document.getElementById('den_' + i);
-        date = new Date();
-        date.setDate(new Date().getDate() + (i - 2));
-        date = date.getDay();
-        dalsiDen = dny[date];
-        dnyValue[i].innerHTML = dalsiDen;
-    }
-}
-
-zobrazDny();
-
-
 //Lokace a stupně podle lokace
 function getLocation() {
     if (navigator.geolocation) {
@@ -66,6 +45,7 @@ function findWeather(url) {
 
             let maxTemps;
             let minTemps;        
+            let typPocasi;
 
             let arr = [];
             
@@ -77,7 +57,11 @@ function findWeather(url) {
 
                 maxTemps = data['list'][i]['main']['temp_max'];
                 minTemps = data['list'][i]['main']['temp_min'];
-            
+
+                if (i == 0) {
+                    typPocasi = data['list'][i]['weather'][0]['main'];
+                }                
+
                 arr.push([den, maxTemps, minTemps]);
                 
                 if (pocetDni == den) {
@@ -139,6 +123,38 @@ function findWeather(url) {
                 stupneValue[i].innerHTML = "<span class='stupne_max'>" + stupne[i - 1][0] + "°</span><span class='stupne_min'>/" + stupne[i - 1][1] + "°</span>";
             }
             
+            //Změna pozadí podle toho jaká je obloha
+            switch (typPocasi) {
+                case "Rain":
+                    console.log("Rain");
+                    document.body.style.backgroundColor = "#38447e";
+                    break;
+                case "Clear":
+                    console.log("Clear");
+                    document.body.style.backgroundColor = "#3f9df5";
+                    break;
+                case "Clouds":
+                    console.log("Clouds");
+                    document.body.style.backgroundColor = "#afb5bb";
+                    break;
+                case "Snow":
+                    console.log("Snow");
+                    document.body.style.backgroundColor = "#ebeced";
+                    break;
+                case "Drizzle":
+                    console.log("Drizzle");
+                    document.body.style.backgroundColor = "#6984d6";
+                    break;
+                case "Thunderstorm":
+                    console.log("Thunderstorm");
+                    document.body.style.backgroundColor = "#2b375c";
+                    break;
+                case "Atmosphere":
+                    console.log("Atmosphere");
+                    document.body.style.backgroundColor = "#a1b3e8";
+                    break;
+            }
+
             //console.log(stupne); //Vypíše zaokrouhleně Math.round max a min
             //console.log(arr); //Vypíše každý den, max, min
         });

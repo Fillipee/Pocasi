@@ -133,6 +133,18 @@ body {
 
 @media only screen and (max-width: 700px) {
     .content {
-        width: 80%;
+        width: 70%;        
+        margin: 3% 3% 0% 9%;       
+    }
+
+    .staty {
+        width: 10%;
+        margin: 3% 3% 0% 3%;
+        padding: 1%;
+    }
+    
+    .staty li {
+        margin-top: 10%;
+        padding: 6%;
     }
   }

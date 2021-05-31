@@ -33,6 +33,7 @@ document.querySelectorAll('.country').forEach(item => {
 
         stat = item.innerHTML;
         
+        inp.value = "";
         mesta.length = 0; //Vyresetuje města
         fetch("city.list.json")
         .then(response => response.json())
