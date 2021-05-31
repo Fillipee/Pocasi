@@ -124,34 +124,43 @@ function findWeather(url) {
             }
             
             //Změna pozadí podle toho jaká je obloha
+            const transitionTime = "1s";
             switch (typPocasi) {
                 case "Rain":
                     console.log("Rain");
-                    document.body.style.backgroundColor = "#38447e";
+                    document.body.style.backgroundColor = rain;
+                    document.body.style.transition = transitionTime;
                     break;
                 case "Clear":
                     console.log("Clear");
-                    document.body.style.backgroundColor = "#3f9df5";
+                    document.body.style.backgroundColor = clear;
+                    document.body.style.transition = transitionTime;
+
                     break;
                 case "Clouds":
                     console.log("Clouds");
-                    document.body.style.backgroundColor = "#afb5bb";
+                    document.body.style.backgroundColor = clouds;
+                    document.body.style.transition = transitionTime;
                     break;
                 case "Snow":
                     console.log("Snow");
-                    document.body.style.backgroundColor = "#ebeced";
+                    document.body.style.backgroundColor = snow;
+                    document.body.style.transition = transitionTime;
                     break;
                 case "Drizzle":
                     console.log("Drizzle");
-                    document.body.style.backgroundColor = "#6984d6";
+                    document.body.style.backgroundColor = drizzle;
+                    document.body.style.transition = transitionTime;
                     break;
                 case "Thunderstorm":
                     console.log("Thunderstorm");
-                    document.body.style.backgroundColor = "#2b375c";
+                    document.body.style.backgroundColor = thunderstorm;
+                    document.body.style.transition = transitionTime;
                     break;
                 case "Atmosphere":
                     console.log("Atmosphere");
-                    document.body.style.backgroundColor = "#a1b3e8";
+                    document.body.style.backgroundColor = atmosphere;
+                    document.body.style.transition = transitionTime;
                     break;
             }
 
