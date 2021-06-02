@@ -44,6 +44,6 @@ document.querySelectorAll('.country').forEach(item => {
                 }
             }
             
-        });
+        });        
     });
 });

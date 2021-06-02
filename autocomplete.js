@@ -49,6 +49,9 @@ function autocomplete(inp, arr) {
                 b.addEventListener("click", function(e) {
                 /*insert the value for the autocomplete text field:*/
                 inp.value = this.getElementsByTagName("input")[0].value;
+                // Najde pozici
+                let url = 'http://api.openweathermap.org/data/2.5/forecast?q=' + inp.value + '&appid=eacd2d0d73c999fa91d10f4c9577a868&units=metric';
+                findWeather(url);
                 /*close the list of autocompleted values,
                 (or any other open lists of autocompleted values:*/
                 closeAllLists();

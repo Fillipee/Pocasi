@@ -36,7 +36,10 @@ body {
 }
 
 .staty li:not(:first-child) {
-    margin-top: 10%;
+    margin-top: 10%;    
+}
+
+.staty li {
     padding: 6%;
 }
 
@@ -48,6 +51,13 @@ body {
 
 .active {
     font-weight: bold;
+}
+
+.vysvetlivka {
+    opacity: 50%;
+    font-size: 12pt;
+    display: flex;
+    margin: 1% 2% 0% 2%;    
 }
 
 /* Legenda */
